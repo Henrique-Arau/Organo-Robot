@@ -39,7 +39,7 @@ Podemos colar o comando no prompt e pressionar "Enter" para executar a instalaç
 # Instalar SeleniumLibrary
 Após a conclusão da instalação do Robot Framework, o próximo passo é instalar a Selenium Library. Da mesma forma que foi feito com o Robot, acesse a documentação oficial da Selenium no GitHub, onde estão os passos de instalação. Copie o seguinte comando e execute no prompt do Windows.
 
-<h4>pip install --upgrade robotframework-seleniumlibrary<h4>
+<code>pip install --upgrade robotframework-seleniumlibrary</code>
 
 
 # Instalar o ChromeDriver
@@ -92,7 +92,7 @@ No prompt de comando, digitaremos o comando CD, seguido por espaço, e colaremos
 
 O próximo passo é instalar esse projeto no computador, onde entra a instalação do Node. Vamos digitar o comando npm install para realizar a instalação local do Organo no computador.
 
-<h4>npm install</h4>
+<code>npm install</code>
 
 
 Após pressionar "Enter", aguardaremos a conclusão da instalação.
@@ -103,6 +103,6 @@ No prompt de comando, digitei o comando CLS para limpar minha tela para que poss
 
 Vamos digitar npm start e pressionar "Enter" para executar o Organo na nossa máquina.
 
-<h4>npm start</h4>
+<code>npm start</code>
 
 Começou a executar já abriu no navegador com o endereço localhost:3000 aparecendo na barra de endereço. Esse é o site onde vamos realizar nossos testes.
