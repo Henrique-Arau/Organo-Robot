@@ -29,7 +29,7 @@ Em seguida, vamos instalar o Robot Framework. Para isso, acessaremos a página o
 
 Na aba "Install" da página oficial do Robot, há o seguinte comando:
 
-<textarea rows="4" cols="50">pip install robotframework</textarea>
+<h4>pip install robotframework</h4>
 
 
 Esse comando deve ser copiado e executado no prompt de comando do Windows. Note que este deve ser executado como administrador.
