@@ -76,7 +76,7 @@ Precisamos mover o arquivo recortado para dentro da pasta "Windows", permitindo 
 O próximo passo de instalação será a instalação do Organo.
 
 Acesse este link direto para o download do Organo.
-Git:
+Git: https://github.com/Henrique-Arau/site-organo
 
 Ao clicar no link acima, você poderá iniciar o download e salvar na pasta desejada. No meu caso, estou salvando todos os arquivos na minha área de trabalho.
 
