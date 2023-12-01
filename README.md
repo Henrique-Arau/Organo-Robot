@@ -20,6 +20,7 @@ Por que vamos instalar o Node?
 O Organo, o projeto que usaremos como base para nossos testes, foi criado em Node.
 
 Como vamos executar localmente precisamos ter o Node instalado também. Assim como fizemos com o Python, basta acessar a página oficial do Node e clicar para fazer o download do instalador.
+https://nodejs.org/en/download
 
 Após fazer o download na máquina, podemos executar o instalador e seguir clicando em "Next" até o final da instalação. O último passo é clicar em "Install" e aguardar a instalação no computador.
 
@@ -28,7 +29,7 @@ Em seguida, vamos instalar o Robot Framework. Para isso, acessaremos a página o
 
 Na aba "Install" da página oficial do Robot, há o seguinte comando:
 
-pip install robotframework
+<div>pip install robotframework</div>
 
 
 Esse comando deve ser copiado e executado no prompt de comando do Windows. Note que este deve ser executado como administrador.
@@ -38,7 +39,7 @@ Podemos colar o comando no prompt e pressionar "Enter" para executar a instalaç
 # Instalar SeleniumLibrary
 Após a conclusão da instalação do Robot Framework, o próximo passo é instalar a Selenium Library. Da mesma forma que foi feito com o Robot, acesse a documentação oficial da Selenium no GitHub, onde estão os passos de instalação. Copie o seguinte comando e execute no prompt do Windows.
 
-pip install --upgrade robotframework-seleniumlibrary
+<div>pip install --upgrade robotframework-seleniumlibrary</div>
 
 
 # Instalar o ChromeDriver
@@ -51,6 +52,7 @@ Como determinar qual é a versão que você precisa instalar?
 No seu navegador Google Chrome, clique nos três pontinhos abaixo do botão de fechar janela (botão "Personalizar e controlar o Google Chrome"). Depois, selecione a opção "Ajuda > Sobre o Chrome".
 
 Nesta página, a versão do Chrome é exibida. É importante que o seu navegador Google Chrome esteja atualizado. Em seguida, retorne à página oficial do ChromeDriver para identificar qual é a versão mais adequada para você.
+https://googlechromelabs.github.io/chrome-for-testing/#stable
 
 Navegando pela página do ChromeDriver, é possível ver as versões disponíveis. É interessante observar que, logo no topo da página, há uma mensagem informando sobre outra forma de instalação para versões do navegador acima da versão 115. Já há um link que redireciona você para realizar essa instalação nesta página intitulada "Chrome for Testing availability".
 
@@ -90,7 +92,7 @@ No prompt de comando, digitaremos o comando CD, seguido por espaço, e colaremos
 
 O próximo passo é instalar esse projeto no computador, onde entra a instalação do Node. Vamos digitar o comando npm install para realizar a instalação local do Organo no computador.
 
-npm install
+<div>npm install</div>
 
 
 Após pressionar "Enter", aguardaremos a conclusão da instalação.
@@ -101,6 +103,6 @@ No prompt de comando, digitei o comando CLS para limpar minha tela para que poss
 
 Vamos digitar npm start e pressionar "Enter" para executar o Organo na nossa máquina.
 
-npm start
+<div>npm start</div>
 
 Começou a executar já abriu no navegador com o endereço localhost:3000 aparecendo na barra de endereço. Esse é o site onde vamos realizar nossos testes.
