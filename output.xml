@@ -1,67 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231201 12:33:32.337" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231201 15:48:47.102" rpa="false" schemaversion="4">
 <suite id="s1" name="Preenchimento Correto" source="c:\Users\penie\OneDrive - Spread Tecnologia\Nova pasta\CURSO-ROBOT\preenchimento_correto.robot">
-<test id="s1-t1" name="Verificar se é possivel criar mais de um card se preenchermos os campos corretamente" line="27">
+<test id="s1-t1" name="Verificar se é possivel criar mais de um card se preenchermos os campos corretamente" line="28">
 <kw name="Dado que eu acesse o Organo" library="setup_teardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=http://localhost:3000/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231201 12:33:32.802" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20231201 12:33:32.801" endtime="20231201 12:33:35.798"/>
+<msg timestamp="20231201 15:48:48.100" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20231201 15:48:48.099" endtime="20231201 15:48:50.625"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:32.800" endtime="20231201 12:33:35.799"/>
+<status status="PASS" starttime="20231201 15:48:48.099" endtime="20231201 15:48:50.626"/>
 </kw>
 <kw name="Dado que preencha os campos do formulario">
+<kw name="First Name" library="FakerLibrary">
+<var>${Nome}</var>
+<msg timestamp="20231201 15:48:50.630" level="INFO">${Nome} = Vitória</msg>
+<status status="PASS" starttime="20231201 15:48:50.629" endtime="20231201 15:48:50.632"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_NOME}</arg>
-<arg>Akemi</arg>
+<arg>${Nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:35.806" level="INFO">Typing text 'Akemi' into text field 'id:form-nome'.</msg>
-<status status="PASS" starttime="20231201 12:33:35.802" endtime="20231201 12:33:35.996"/>
+<msg timestamp="20231201 15:48:50.636" level="INFO">Typing text 'Vitória' into text field 'id:form-nome'.</msg>
+<status status="PASS" starttime="20231201 15:48:50.633" endtime="20231201 15:48:50.827"/>
+</kw>
+<kw name="Job" library="FakerLibrary">
+<var>${Cargo}</var>
+<msg timestamp="20231201 15:48:50.828" level="INFO">${Cargo} = Ecólogo</msg>
+<status status="PASS" starttime="20231201 15:48:50.827" endtime="20231201 15:48:50.828"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_CARGO}</arg>
-<arg>Desenvolvedora</arg>
+<arg>${Cargo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:35.998" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
-<status status="PASS" starttime="20231201 12:33:35.997" endtime="20231201 12:33:36.144"/>
+<msg timestamp="20231201 15:48:50.830" level="INFO">Typing text 'Ecólogo' into text field 'id:form-cargo'.</msg>
+<status status="PASS" starttime="20231201 15:48:50.829" endtime="20231201 15:48:50.979"/>
+</kw>
+<kw name="Image Url" library="FakerLibrary">
+<var>${Imagem}</var>
+<doc>Returns URL to placeholder image
+Example: http://placehold.it/640x480</doc>
+<msg timestamp="20231201 15:48:50.980" level="INFO">${Imagem} = https://placekitten.com/665/994</msg>
+<status status="PASS" starttime="20231201 15:48:50.979" endtime="20231201 15:48:50.980"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_IMAGE}</arg>
-<arg>https://picsum.photos/200/300</arg>
+<arg>${Imagem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:36.146" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
-<status status="PASS" starttime="20231201 12:33:36.145" endtime="20231201 12:33:36.377"/>
+<msg timestamp="20231201 15:48:50.982" level="INFO">Typing text 'https://placekitten.com/665/994' into text field 'id:form-imagem'.</msg>
+<status status="PASS" starttime="20231201 15:48:50.981" endtime="20231201 15:48:51.161"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:36.380" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
-<status status="PASS" starttime="20231201 12:33:36.378" endtime="20231201 12:33:36.476"/>
+<msg timestamp="20231201 15:48:51.163" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<status status="PASS" starttime="20231201 15:48:51.161" endtime="20231201 15:48:51.242"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${OPCAO_PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:36.478" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
-<status status="PASS" starttime="20231201 12:33:36.477" endtime="20231201 12:33:36.528"/>
+<msg timestamp="20231201 15:48:51.244" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<status status="PASS" starttime="20231201 15:48:51.243" endtime="20231201 15:48:51.293"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 12:33:46.530" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20231201 12:33:36.529" endtime="20231201 12:33:46.530"/>
+<msg timestamp="20231201 15:49:01.294" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231201 15:48:51.293" endtime="20231201 15:49:01.295"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:35.800" endtime="20231201 12:33:46.531"/>
+<status status="PASS" starttime="20231201 15:48:50.628" endtime="20231201 15:49:01.295"/>
 </kw>
 <kw name="E clique no botão criar card">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:46.535" level="INFO">Clicking element 'id:form-botao'.</msg>
-<status status="PASS" starttime="20231201 12:33:46.534" endtime="20231201 12:33:46.708"/>
+<msg timestamp="20231201 15:49:01.299" level="INFO">Clicking element 'id:form-botao'.</msg>
+<status status="PASS" starttime="20231201 15:49:01.298" endtime="20231201 15:49:01.712"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:46.532" endtime="20231201 12:33:46.709"/>
+<status status="PASS" starttime="20231201 15:49:01.297" endtime="20231201 15:49:01.713"/>
 </kw>
 <kw name="Então identificar 3 cards no time esperado">
 <for flavor="IN RANGE">
@@ -71,133 +88,167 @@
 <iter>
 <var name="${i}">1</var>
 <kw name="Dado que preencha os campos do formulario">
+<kw name="First Name" library="FakerLibrary">
+<var>${Nome}</var>
+<msg timestamp="20231201 15:49:01.717" level="INFO">${Nome} = Renan</msg>
+<status status="PASS" starttime="20231201 15:49:01.717" endtime="20231201 15:49:01.717"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_NOME}</arg>
-<arg>Akemi</arg>
+<arg>${Nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:46.712" level="INFO">Typing text 'Akemi' into text field 'id:form-nome'.</msg>
-<status status="PASS" starttime="20231201 12:33:46.711" endtime="20231201 12:33:47.007"/>
+<msg timestamp="20231201 15:49:01.718" level="INFO">Typing text 'Renan' into text field 'id:form-nome'.</msg>
+<status status="PASS" starttime="20231201 15:49:01.717" endtime="20231201 15:49:01.879"/>
+</kw>
+<kw name="Job" library="FakerLibrary">
+<var>${Cargo}</var>
+<msg timestamp="20231201 15:49:01.880" level="INFO">${Cargo} = Capataz</msg>
+<status status="PASS" starttime="20231201 15:49:01.880" endtime="20231201 15:49:01.880"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_CARGO}</arg>
-<arg>Desenvolvedora</arg>
+<arg>${Cargo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:47.008" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
-<status status="PASS" starttime="20231201 12:33:47.007" endtime="20231201 12:33:47.183"/>
+<msg timestamp="20231201 15:49:01.882" level="INFO">Typing text 'Capataz' into text field 'id:form-cargo'.</msg>
+<status status="PASS" starttime="20231201 15:49:01.881" endtime="20231201 15:49:01.988"/>
+</kw>
+<kw name="Image Url" library="FakerLibrary">
+<var>${Imagem}</var>
+<doc>Returns URL to placeholder image
+Example: http://placehold.it/640x480</doc>
+<msg timestamp="20231201 15:49:01.989" level="INFO">${Imagem} = https://picsum.photos/151/712</msg>
+<status status="PASS" starttime="20231201 15:49:01.988" endtime="20231201 15:49:01.989"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_IMAGE}</arg>
-<arg>https://picsum.photos/200/300</arg>
+<arg>${Imagem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:47.184" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
-<status status="PASS" starttime="20231201 12:33:47.183" endtime="20231201 12:33:47.328"/>
+<msg timestamp="20231201 15:49:01.990" level="INFO">Typing text 'https://picsum.photos/151/712' into text field 'id:form-imagem'.</msg>
+<status status="PASS" starttime="20231201 15:49:01.989" endtime="20231201 15:49:02.132"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:47.329" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
-<status status="PASS" starttime="20231201 12:33:47.328" endtime="20231201 12:33:47.391"/>
+<msg timestamp="20231201 15:49:02.133" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<status status="PASS" starttime="20231201 15:49:02.132" endtime="20231201 15:49:02.193"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${OPCAO_PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:47.393" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
-<status status="PASS" starttime="20231201 12:33:47.392" endtime="20231201 12:33:47.429"/>
+<msg timestamp="20231201 15:49:02.194" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<status status="PASS" starttime="20231201 15:49:02.194" endtime="20231201 15:49:02.270"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 12:33:57.430" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20231201 12:33:47.430" endtime="20231201 12:33:57.430"/>
+<msg timestamp="20231201 15:49:12.271" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231201 15:49:02.270" endtime="20231201 15:49:12.272"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:46.711" endtime="20231201 12:33:57.431"/>
+<status status="PASS" starttime="20231201 15:49:01.716" endtime="20231201 15:49:12.272"/>
 </kw>
 <kw name="E clique no botão criar card">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.433" level="INFO">Clicking element 'id:form-botao'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.432" endtime="20231201 12:33:57.485"/>
+<msg timestamp="20231201 15:49:12.275" level="INFO">Clicking element 'id:form-botao'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.274" endtime="20231201 15:49:12.341"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:57.431" endtime="20231201 12:33:57.485"/>
+<status status="PASS" starttime="20231201 15:49:12.273" endtime="20231201 15:49:12.341"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:46.710" endtime="20231201 12:33:57.485"/>
+<status status="PASS" starttime="20231201 15:49:01.715" endtime="20231201 15:49:12.341"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Dado que preencha os campos do formulario">
+<kw name="First Name" library="FakerLibrary">
+<var>${Nome}</var>
+<msg timestamp="20231201 15:49:12.343" level="INFO">${Nome} = Guilherme</msg>
+<status status="PASS" starttime="20231201 15:49:12.342" endtime="20231201 15:49:12.343"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_NOME}</arg>
-<arg>Akemi</arg>
+<arg>${Nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.489" level="INFO">Typing text 'Akemi' into text field 'id:form-nome'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.487" endtime="20231201 12:33:57.609"/>
+<msg timestamp="20231201 15:49:12.344" level="INFO">Typing text 'Guilherme' into text field 'id:form-nome'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.343" endtime="20231201 15:49:12.451"/>
+</kw>
+<kw name="Job" library="FakerLibrary">
+<var>${Cargo}</var>
+<msg timestamp="20231201 15:49:12.452" level="INFO">${Cargo} = Psicomotricista</msg>
+<status status="PASS" starttime="20231201 15:49:12.451" endtime="20231201 15:49:12.452"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_CARGO}</arg>
-<arg>Desenvolvedora</arg>
+<arg>${Cargo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.611" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.610" endtime="20231201 12:33:57.727"/>
+<msg timestamp="20231201 15:49:12.453" level="INFO">Typing text 'Psicomotricista' into text field 'id:form-cargo'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.452" endtime="20231201 15:49:12.570"/>
+</kw>
+<kw name="Image Url" library="FakerLibrary">
+<var>${Imagem}</var>
+<doc>Returns URL to placeholder image
+Example: http://placehold.it/640x480</doc>
+<msg timestamp="20231201 15:49:12.572" level="INFO">${Imagem} = https://dummyimage.com/994x119</msg>
+<status status="PASS" starttime="20231201 15:49:12.571" endtime="20231201 15:49:12.572"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_IMAGE}</arg>
-<arg>https://picsum.photos/200/300</arg>
+<arg>${Imagem}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.728" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.728" endtime="20231201 12:33:57.873"/>
+<msg timestamp="20231201 15:49:12.573" level="INFO">Typing text 'https://dummyimage.com/994x119' into text field 'id:form-imagem'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.572" endtime="20231201 15:49:12.717"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.875" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.874" endtime="20231201 12:33:57.936"/>
+<msg timestamp="20231201 15:49:12.718" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.717" endtime="20231201 15:49:12.776"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${OPCAO_PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:33:57.938" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
-<status status="PASS" starttime="20231201 12:33:57.937" endtime="20231201 12:33:57.975"/>
+<msg timestamp="20231201 15:49:12.777" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<status status="PASS" starttime="20231201 15:49:12.776" endtime="20231201 15:49:12.814"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 12:34:07.976" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20231201 12:33:57.976" endtime="20231201 12:34:07.976"/>
+<msg timestamp="20231201 15:49:22.815" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231201 15:49:12.815" endtime="20231201 15:49:22.815"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:57.486" endtime="20231201 12:34:07.976"/>
+<status status="PASS" starttime="20231201 15:49:12.342" endtime="20231201 15:49:22.815"/>
 </kw>
 <kw name="E clique no botão criar card">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 12:34:07.978" level="INFO">Clicking element 'id:form-botao'.</msg>
-<status status="PASS" starttime="20231201 12:34:07.977" endtime="20231201 12:34:08.026"/>
+<msg timestamp="20231201 15:49:22.817" level="INFO">Clicking element 'id:form-botao'.</msg>
+<status status="PASS" starttime="20231201 15:49:22.816" endtime="20231201 15:49:22.877"/>
 </kw>
-<status status="PASS" starttime="20231201 12:34:07.977" endtime="20231201 12:34:08.027"/>
+<status status="PASS" starttime="20231201 15:49:22.816" endtime="20231201 15:49:22.877"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:57.486" endtime="20231201 12:34:08.027"/>
+<status status="PASS" starttime="20231201 15:49:12.342" endtime="20231201 15:49:22.878"/>
 </iter>
-<status status="PASS" starttime="20231201 12:33:46.710" endtime="20231201 12:34:08.027"/>
+<status status="PASS" starttime="20231201 15:49:01.715" endtime="20231201 15:49:22.878"/>
 </for>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 12:34:18.028" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20231201 12:34:08.027" endtime="20231201 12:34:18.028"/>
+<msg timestamp="20231201 15:49:32.880" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231201 15:49:22.878" endtime="20231201 15:49:32.880"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:46.709" endtime="20231201 12:34:18.029"/>
+<status status="PASS" starttime="20231201 15:49:01.714" endtime="20231201 15:49:32.880"/>
 </kw>
 <kw name="Fechar o navegador" library="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231201 12:34:18.031" endtime="20231201 12:34:20.277"/>
+<status status="PASS" starttime="20231201 15:49:32.882" endtime="20231201 15:49:35.099"/>
 </kw>
-<status status="PASS" starttime="20231201 12:34:18.030" endtime="20231201 12:34:20.277"/>
+<status status="PASS" starttime="20231201 15:49:32.881" endtime="20231201 15:49:35.100"/>
 </kw>
-<status status="PASS" starttime="20231201 12:33:32.799" endtime="20231201 12:34:20.278"/>
+<status status="PASS" starttime="20231201 15:48:48.097" endtime="20231201 15:49:35.101"/>
 </test>
-<status status="PASS" starttime="20231201 12:33:32.348" endtime="20231201 12:34:20.280"/>
+<status status="PASS" starttime="20231201 15:48:47.110" endtime="20231201 15:49:35.105"/>
 </suite>
 <statistics>
 <total>

@@ -1,5 +1,6 @@
 *** Settings ***
 Library          SeleniumLibrary
+Library          FakerLibrary    locale=pt_BR
 Resource         setup_teardown.robot
 Test Setup       Dado que eu acesse o Organo
 Test Teardown    Fechar o navegador
@@ -32,9 +33,12 @@ Verificar se é possivel criar mais de um card se preenchermos os campos correta
 *** Keywords ***
 
 Dado que preencha os campos do formulario
-    Input Text       ${CAMPO_NOME}    Akemi
-    Input Text       ${CAMPO_CARGO}     Desenvolvedora
-    Input Text       ${CAMPO_IMAGE}    https://picsum.photos/200/300
+    ${Nome}          FakerLibrary.First Name
+    Input Text       ${CAMPO_NOME}     ${Nome}
+    ${Cargo}         FakerLibrary.Job
+    Input Text       ${CAMPO_CARGO}    ${Cargo}
+    ${Imagem}        FakerLibrary.Image Url
+    Input Text       ${CAMPO_IMAGE}    ${Imagem}
     Click Element    ${CAMPO_TIME}
     Click Element    ${OPCAO_PROGRAMACAO}
     Sleep    10s
